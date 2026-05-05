@@ -64,10 +64,21 @@ const users = [
 ];
 
 const usersName = users.map(el=>el.name)
+
+// const usersNameNewArr;
+// for(let i = 0; i< users.length; i++){
+//     usersNameNewArr += usersNameNewArr + users[i].name;
+// }
+
 const usersBalanceUp = users.map(el=>el.balance+(el.balance*0.15))
+
+// for(let i = 0; i < users.length; i++){
+//     users[i].balance * 0.15;
+// }
+
 const usersBalanceBiggerThan3000 = users.filter(el=>el.balance>3000)
 const findUserById = users.find(el=>el.id==='user-3')
-const isEveryoneActive = users.every(el=>el.isActive==true)
+const isEveryoneActive = users.every(el=>el.isActive===true)
 const usersBalance = users.map(el=>el.balance)
 const usersHighestBalance = users.reduce((max, user) => user.balance > max ? user.balance : max, users[0].balance)
 const sortUsersByBalance = users.sort((a,b)=>a.balance-b.balance)
